@@ -3,4 +3,27 @@ INTRODUCTION
 time of a program is data structure.
 - Array, matrices and linked list are called physical data structure ie they define how the data is arranged in the memory.
 Stack,queue,trees,graph,hashing are logical data structure ie how data is utilised.
-- Most of the data structure implementation are in recursion due the mathematical nature of CS. As this is inefficient in systems, they are converted to loops.
+- Most of the data structure implementation are in recursion due the mathematical nature of CS. As this is inefficient in systems,
+they are converted to loops.
+
+C/C++ Concepts
+- Pointers are variables to store the address of the data and can access data by dereferencing. One use case is accessing the heap
+memory space. The code accesses the RAM & stack memory directly but not the heap ie accessing resources external to
+program(file,network,hard disk). Other use case is parameter passing.
+- Access heap using malloc function of stdlib in C. It returns a void pointer so typecast it [int *]. In C++ use new.
+- In C++, you can use reference as a alias for a vairable and must be initialised during declaration.
+int a=10;
+int &ref = a; //ref is alias for a.
+This is used for parameter passing.
+- Array group of same data types. Structure group of different data types. Functions group of instructions for a task. Class group of similar
+data and function.
+- C has call by value and call by address. C++ adds call by reference. Add & in the formal variables. The way this is implemented
+is that the function kind of inlines the called funcition into the calling funcition and thus can access the calling funcition's
+local variables. Advisable for small funcitions, not for complex funtions with loops n all.
+- Arrays are passed via pointer mechanism and therefore are pass by value only.
+void func(int *A,int size) // A can point to any integer or integer array 
+void func(int A[],int size) //A is a pointer to array only.
+int [] func() //returning array
+- When structure has an array and is passed by value then the array inside is also created in the stack frame(the function will
+have its own copy of the array)
+- Template class : C++ allows using of same classes with different data types.
