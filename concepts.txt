@@ -1,0 +1,6 @@
+INTRODUCTION
+- Programs are basically instructions that perform operations on data. Organisation of data in the main memory during execution
+time of a program is data structure.
+- Array, matrices and linked list are called physical data structure ie they define how the data is arranged in the memory.
+Stack,queue,trees,graph,hashing are logical data structure ie how data is utilised.
+- Most of the data structure implementation are in recursion due the mathematical nature of CS. As this is inefficient in systems, they are converted to loops.
