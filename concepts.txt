@@ -1,5 +1,5 @@
 INTRODUCTION
-- Programs are basically instructions that perform operations on data. Organisation of data in the main memory during execution
+- Programs are basically set of instructions that perform operations on data. Organisation of data in the main memory during execution
 time of a program is data structure.
 - Array, matrices and linked list are called physical data structure ie they define how the data is arranged in the memory.
 Stack,queue,trees,graph,hashing are logical data structure ie how data is utilised.
@@ -27,3 +27,29 @@ int [] func() //returning array
 - When structure has an array and is passed by value then the array inside is also created in the stack frame(the function will
 have its own copy of the array)
 - Template class : C++ allows using of same classes with different data types.
+
+INTRODUCTION
+- Datastructure makes sense in the context of runtime of a program loaded in the main memory that accesses the data in the main
+memory(not in storage). Datastructures are formed in the main memory during the execution time of program.
+- Commercial data (bank,factories) have huge amount data stored in a database on the disk in the form of tables ie the arrangement
+of data in the form of relational tables or other models such that the applications can retrieve them from the storage efficiently
+is database.
+- Data stored as array of disks in the form of operational data and legacy data(large and old data which are not used daily) are
+called data warehouse. Algos for analysing these kinds of data are data mining algos.(searching for trends etc.)
+
+STACK and HEAP 
+- Generally RAM is divided into manageble size called segment and the value is 64KB(64x1024 bytes - address from 0 to 65535).
+- When the memory needed for the program is decided at compile time and is static, it is called static memory allocation
+- Stack memory is organised and the creation/deletion of variables are done automatically at runtime as decided by the compiler.
+- Heap in unorganised memory and must be treated as a resource. It is accessed via pointer and must be deallocated to prevent
+memory leaks.
+
+PHYSICAL AND LOGICAL DATA STRUCTURE
+- Physical data structure defines how the memory is organised and allocated for storing the data. Array can be in stack/heap and can be used when the
+length is known. Linked list is in heap but the head may be on the stack and is used for variable size.
+- Logical data structure is how you perform operations on the data like insertion/deletion. These are generally implemented using
+physical data structures.
+
+ABSTRACT DATA TYPE
+- Data types are representation of the data in the memory and the operations allowed on it. If they are abstracted away and you
+dont have to worry about its implementation then it is abstract data type. <-- didnt clearly understand this
