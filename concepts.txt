@@ -66,3 +66,25 @@ For simple processes it could be O(1) ie constant time ie not dependent on numbe
 
 - Space complexity can be thought of the storage needed is dependent on what. For array it is O(n). For nxn matrix it is O(n^2).
 
+RECURSION
+Basic structure : 
+type funcitionName(param) {
+    if(<base condition>) {
+        --ascending or calling phase--;
+        funcitionName(param);
+        --descending or returning phase--;
+    }
+}
+
+- Function calling itself untill a condition is met. The condition is needed or else it will go to infinite calling.
+- Recursive funcitions are traced by building the tracing trees with it output on one side and the function call to itself with
+the updated param on the other side, which keeps on splitting. The calling tree will have a calling phase and then the returning phase.
+- Loops have only ascending stage but recursion have both ascending and descending stage.
+- Stack frames are stored on top of each other and poped off once the recursive function starts returning.
+- Tail recursion: If inside the recursive function, it is calling itself in the end then it is tail recursion and not doing any
+processsing during return time. For such recursion, all the processing is done during calling time and none during the returning
+time. Tail recursions can be easily converted into loops. Generally the time complexity will be same for loops and tail recursion
+but space complexity will be more for recursion. Generally, the compiler will optimize this for you.
+- Head recursion: If the first thing it does is a call to itself then it is head recursion. All the processing will be done during
+return time. Not directly convertable to loops but can be done.
+- Tree recursion: 
