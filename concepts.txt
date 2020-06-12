@@ -87,4 +87,13 @@ time. Tail recursions can be easily converted into loops. Generally the time com
 but space complexity will be more for recursion. Generally, the compiler will optimize this for you.
 - Head recursion: If the first thing it does is a call to itself then it is head recursion. All the processing will be done during
 return time. Not directly convertable to loops but can be done.
-- Tree recursion: 
+- Tree recursion: If the recursive function calls itself more than one time. Time complexity if it is called two times is O(2^n).
+- Indirect recursion: If function calls one function and then it calls another function which calls the first function. There is a
+cyclic calling involved.
+- Nested recursion: When the function calls itself by passing same function as the argument. ex:
+void fun(int n) {
+    if(---) {
+        fun ( fun (n - 1));
+    }
+}
+
