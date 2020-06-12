@@ -53,3 +53,38 @@ physical data structures.
 ABSTRACT DATA TYPE
 - Data types are representation of the data in the memory and the operations allowed on it. If they are abstracted away and you
 dont have to worry about its implementation then it is abstract data type. <-- didnt clearly understand this
+
+TIME n SPACE COMPLEXITY
+- Time complexity can be thought of the order/degree of polynomial of n(number of elements) required to complete a operation.
+eg:
+Adding the elements of an array is O(n) as you will access all the elements. O(n) is called order of n.
+Comparing each elements with other elements is O(n^2)
+Comparing each elements with elements in front of it in array is still O(n^2)
+If the process divides the array successively by two each time untill it reaches 1, then it is O(log n) <--base2
+For processing a single path in a binary tree is O(log n), if processing all the elements then O(n).
+For simple processes it could be O(1) ie constant time ie not dependent on number of elements.like swapping two numbers.
+
+- Space complexity can be thought of the storage needed is dependent on what. For array it is O(n). For nxn matrix it is O(n^2).
+
+RECURSION
+Basic structure : 
+type funcitionName(param) {
+    if(<base condition>) {
+        --ascending or calling phase--;
+        funcitionName(param);
+        --descending or returning phase--;
+    }
+}
+
+- Function calling itself untill a condition is met. The condition is needed or else it will go to infinite calling.
+- Recursive funcitions are traced by building the tracing trees with it output on one side and the function call to itself with
+the updated param on the other side, which keeps on splitting. The calling tree will have a calling phase and then the returning phase.
+- Loops have only ascending stage but recursion have both ascending and descending stage.
+- Stack frames are stored on top of each other and poped off once the recursive function starts returning.
+- Tail recursion: If inside the recursive function, it is calling itself in the end then it is tail recursion and not doing any
+processsing during return time. For such recursion, all the processing is done during calling time and none during the returning
+time. Tail recursions can be easily converted into loops. Generally the time complexity will be same for loops and tail recursion
+but space complexity will be more for recursion. Generally, the compiler will optimize this for you.
+- Head recursion: If the first thing it does is a call to itself then it is head recursion. All the processing will be done during
+return time. Not directly convertable to loops but can be done.
+- Tree recursion: 
