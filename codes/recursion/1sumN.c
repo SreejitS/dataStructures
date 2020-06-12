@@ -27,7 +27,7 @@ unsigned long sum_constant_time(unsigned int n)
 
 int main()
 {
-    printf("%ld ", sum_constant_time(4294967295));
+    printf("%lu ", sum_constant_time(4294967295));
 
     return 0;
 }
