@@ -97,3 +97,25 @@ void fun(int n) {
     }
 }
 
+ARRAYS
+- scalar variable will store just one value, vector variable will store many values. Array is collection of same data types.
+- A[5] = {2,4} ; // rest of the elements will be initialised to 0.
+- A[3] & 3[A] & *(A+2) are the same thing. 
+- Static array mean the size of the array is static and is decided at compile time. Dynamic array means the size fo array is
+dynamic and is decided at runtime. Once the array is created, its size cannot be changed.
+- For accessing the heap you need a pointer, which will be in stack but will store the starting address of array when using
+malloc. Delete this pointer after use to avoid memory leak. Once assigned, access it using methods in third point.
+- 2D array is still stored as a linear array. ways of initialising 2D array:
+int A[3][4] = {{1,2,3,4},{4,5,6,7},{8,9,10,11}} //all in stack, normal way 
+
+int *A[3]; A[0] = (int *)malloc(4*sizeof(int)); A[1] = (int *)malloc(4*sizeof(int)); A[2] = (int *)malloc(4*sizeof(int));
+//this one is partially in stack and partially in heap. This is array of pointers. Each pointer pointing to a array in heap.
+
+int **A; A = (int **)malloc(3*sizeof(int)); A[0] = (int *)malloc(4*sizeof(int)); A[1] = (int *)malloc(4*sizeof(int));
+A[2] = (int *)malloc(4*sizeof(int));// All of the array will be in heap. This is a double pointer ie pointer to a pointer.
+
+- Compiler stores the address of first element of the array for any operation on the array. For accessing nth element it adds base
+address to n*sizeof(data). it is better to have 0 indexed array or else compiler will have to substract 1 each time.
+
+- Array ADT : representation and set of operations on it. In C, representation is given by the compiler itself as it basic. No
+operations are defined by default. 
